@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import InteractiveMap from "./components/InteractiveMap";
 import { useState } from "react";
+import "leaflet/dist/leaflet.css";
+
 // Styled clear button component located on the top right of the page
 const ClearButton = styled.button`
   position: absolute;
