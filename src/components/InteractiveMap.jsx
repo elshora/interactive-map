@@ -6,7 +6,12 @@ import {
   useMapEvents,
 } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-
+import marker from "../assets/icons/Marker.svg";
+import { Icon } from "leaflet";
+const myIcon = new Icon({
+  iconUrl: marker,
+  iconSize: [32, 32],
+});
 // eslint-disable-next-line react/prop-types
 const InteractiveMap = ({ markers, setMarkers }) => {
   // add marker on map clickevent
@@ -33,6 +38,7 @@ const InteractiveMap = ({ markers, setMarkers }) => {
             key={index}
             position={[marker.lat, marker.lng]}
             draggable={true}
+            icon={myIcon}
           >
             <Popup>{`( ${marker.lat} , ${marker.lng} )`}</Popup>
           </Marker>
