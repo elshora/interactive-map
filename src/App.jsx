@@ -20,6 +20,17 @@ const ClearButton = styled.button`
     background-color: #0056b3;
   }
 `;
+const Notification = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  z-index: 5000;
+`;
 function App() {
   const [markers, setMarkers] = useState([]);
 
@@ -31,7 +42,11 @@ function App() {
   return (
     <>
       <main className="home">
-        <ClearButton onClick={clearMarkers}>Clear Markers</ClearButton>
+        {markers.length > 0 ? (
+          <ClearButton onClick={clearMarkers}>Clear Markers</ClearButton>
+        ) : (
+          <Notification>Click on the map to add a marker</Notification>
+        )}
         <InteractiveMap markers={markers} setMarkers={setMarkers} />
       </main>
     </>
