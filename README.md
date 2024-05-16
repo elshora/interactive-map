@@ -3,7 +3,7 @@
 Interactive map provide a way to add markers on map and relocate it with drag and drop API.
 It also provide a way to add a popup on marker and show the information on it.
 
-The project is deployed at link-to-your-deployed-project.
+The project is deployed at [link](https://interactive-map-iota.vercel.app/).
 
 ## Table of Contents
 
